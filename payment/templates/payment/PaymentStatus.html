@@ -1,0 +1,22 @@
+{% block body %}
+    <div class="container">
+        <div style="margin-top:10%">
+            <table align='center'>
+                <tr>
+                    <td><h1>Transaction is being processed</h1></td>
+                </tr>
+                <tr>
+                    <td><h2><font color='blue'>Please wait ...</font></h2></td>
+                </tr>
+                <tr>
+                    <td><h2>Please do not press 'Refresh' or 'Back' button</h2></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+{% endblock %}
+{% block js %}
+    <script>
+        window.location.replace(`{{ redirect_url }}`)
+    </script>
+{% endblock %}
